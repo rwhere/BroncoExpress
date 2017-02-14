@@ -8,7 +8,6 @@ AWS.config.update({
 
 var docClient = new AWS.DynamoDB.DocumentClient();
 var tableName = "Bronco_Express";
-var globalItems;
 var globalResponse;
 
 module.exports.getTimes = (event, context, callback) => {
@@ -62,13 +61,12 @@ function onScan(err, data) {
             items.push(item);
           }
         });
-        globalItems = items;
         globalResponse = {
           statusCode: 200,
           headers: {
             "Access-Control-Allow-Origin" : "*"
           },
-          body: JSON.stringify(globalItems)
+          body: JSON.stringify(items)
         };
     }
 }
