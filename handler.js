@@ -9,6 +9,7 @@ AWS.config.update({
 var docClient = new AWS.DynamoDB.DocumentClient();
 var tableName = "Bronco_Express";
 var globalItems;
+var globalResponse;
 
 module.exports.getTimes = (event, context, callback) => {
 
@@ -17,11 +18,7 @@ module.exports.getTimes = (event, context, callback) => {
   };
   console.log("Scanning table.");
   docClient.scan(params, onScan);
-  const response = {
-    statusCode: 200,
-    body: JSON.stringify(globalItems)
-  };
-  callback(null, response);
+  callback(null, globalResponse);
 };
 
 module.exports.storeTimes = (event, context, callback) => {
@@ -34,6 +31,9 @@ module.exports.storeTimes = (event, context, callback) => {
       }
       const response = {
         statusCode: 200,
+        headers: {
+          "Access-Control-Allow-Origin" : "*"
+        },
         body: JSON.stringify({
           message: 'Bronco Express times succesfully stored to DynamoDB!'
         }),
@@ -63,6 +63,13 @@ function onScan(err, data) {
           }
         });
         globalItems = items;
+        globalResponse = {
+          statusCode: 200,
+          headers: {
+            "Access-Control-Allow-Origin" : "*"
+          },
+          body: JSON.stringify(globalItems)
+        };
     }
 }
 
