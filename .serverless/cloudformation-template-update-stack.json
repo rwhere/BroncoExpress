@@ -163,7 +163,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/broncoExpress/dev/1487052782036-2017-02-14T06:13:02.036Z/broncoExpress.zip"
+          "S3Key": "serverless/broncoExpress/dev/1488503762880-2017-03-03T01:16:02.880Z/broncoExpress.zip"
         },
         "FunctionName": "broncoExpress-dev-store",
         "Handler": "handler.storeTimes",
@@ -182,14 +182,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "StoreLambdaVersionUOLwCRigTwINepdZ7uq0aAUcoVlZwIJtEImcgfBshQ": {
+    "StoreLambdaVersionxTOPJ1QjKTfk8mWVgdiBLzImgwnmQ2S3tlIw95W6bog": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "StoreLambdaFunction"
         },
-        "CodeSha256": "UOLwCRigTwINepdZ7uq0aAUcoVlZwIJtEI/mcgfBshQ="
+        "CodeSha256": "xTOPJ1QjKTfk8mWVgdiBLzImgwnmQ2S3tlIw95W6bog="
       }
     },
     "QueryLambdaFunction": {
@@ -199,7 +199,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/broncoExpress/dev/1487052782036-2017-02-14T06:13:02.036Z/broncoExpress.zip"
+          "S3Key": "serverless/broncoExpress/dev/1488503762880-2017-03-03T01:16:02.880Z/broncoExpress.zip"
         },
         "FunctionName": "broncoExpress-dev-query",
         "Handler": "handler.getTimes",
@@ -218,14 +218,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "QueryLambdaVersionUOLwCRigTwINepdZ7uq0aAUcoVlZwIJtEImcgfBshQ": {
+    "QueryLambdaVersionxTOPJ1QjKTfk8mWVgdiBLzImgwnmQ2S3tlIw95W6bog": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "QueryLambdaFunction"
         },
-        "CodeSha256": "UOLwCRigTwINepdZ7uq0aAUcoVlZwIJtEI/mcgfBshQ="
+        "CodeSha256": "xTOPJ1QjKTfk8mWVgdiBLzImgwnmQ2S3tlIw95W6bog="
       }
     },
     "ApiGatewayRestApi": {
@@ -340,7 +340,7 @@
         "MethodResponses": []
       }
     },
-    "ApiGatewayDeployment1487052782171": {
+    "ApiGatewayDeployment1488503762964": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -429,13 +429,13 @@
     "StoreLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "StoreLambdaVersionUOLwCRigTwINepdZ7uq0aAUcoVlZwIJtEImcgfBshQ"
+        "Ref": "StoreLambdaVersionxTOPJ1QjKTfk8mWVgdiBLzImgwnmQ2S3tlIw95W6bog"
       }
     },
     "QueryLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "QueryLambdaVersionUOLwCRigTwINepdZ7uq0aAUcoVlZwIJtEImcgfBshQ"
+        "Ref": "QueryLambdaVersionxTOPJ1QjKTfk8mWVgdiBLzImgwnmQ2S3tlIw95W6bog"
       }
     },
     "ServiceEndpoint": {

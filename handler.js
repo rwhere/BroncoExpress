@@ -50,7 +50,6 @@ function onScan(err, data) {
         console.log("Scan succeeded.");
         data.Items.forEach(function(item) {
           console.log(item.id);
-          delete item['timeStamp'];
           if(contains(items, item) == 1) {
             for(var i = 0; i < items.length; ++i) {
               if(items[i].id == item.id && items[i].timeStamp < item.timeStamp) {
